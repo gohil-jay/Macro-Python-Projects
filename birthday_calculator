@@ -1,14 +1,13 @@
-import datetime
-current_date=datetime.date.today().strftime('%y-%m-%d')
-current_date_1st=current_date.split('-')
+from datetime import date
+today = date.today()
 
-b_date=input('Enter birthday in yyyy-mm-dd format')
-name=input('Name the birthday legend')
-b_date=b_date.split('-')
-
-if(current_date_1st[1]==b_date[1] and current_date_1st[2]==b_date[2]):
-    age=int(current_date_1st[0])-int(b_date[0])
-    ordinal_suffix={1:'st',2:'nd',3:'rd',11:'th',12:'th',13:'th'}.get(age%10 if not 10<age<=13 else age%14,'th')
-    print(f" Its {name}'s {age}{ordinal_suffix} Birthday")
+b_year = input('Enter birthday year')
+b_month = input('Enter birthday month')
+b_date = input('Enter date of your Birthday')
+name = input('Name the birthday legend')
+age = today.year - int(b_year)
+if(today.month==int(b_month) and today.day==int(b_date)):
+    print(f"Happy Birthday {name}")
+    print(f"its your {age} birthday")
 else:
-    print("Sorry ,Today isnt your birthday")
+    print(f"the coming birthday will be your {age+1} birthday")
