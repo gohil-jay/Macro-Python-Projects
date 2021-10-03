@@ -1,16 +1,13 @@
-
 from configparser import ConfigParser
 import requests
 from tkinter import *
 from tkinter import messagebox
-
 
 config_file = "config.ini"
 config = ConfigParser()
 config.read(config_file)
 api_key = config['gfg']['api']
 url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid={}'
-
 
 def getweather(city):
 	result = requests.get(url.format(city, api_key))
@@ -22,15 +19,12 @@ def getweather(city):
 		temp_kelvin = json['main']['temp']
 		temp_celsius = temp_kelvin-273.15
 		weather1 = json['weather'][0]['main']
-		final = [city, country, temp_kelvin,
-				temp_celsius, weather1]
+		final = [city, country, temp_kelvin, temp_celsius, weather1]
 		return final
 	else:
 		print("NO Content Found")
 
-
-# explicit function to
-# search city
+# explicit function to search city
 def search():
 	city = city_text.get()
 	weather = getweather(city)
@@ -43,11 +37,8 @@ def search():
 
 
 app = Tk()
-
 app.title("Weather App")
-
 app.geometry("400x400")
-
 
 city_text = StringVar()
 city_entry = Entry(app, textvariable=city_text)
