@@ -1,3 +1,7 @@
+"""
+!pip install pynput
+"""
+
 from pynput import keyboard
 
 class KeyLogger():
