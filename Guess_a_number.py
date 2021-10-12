@@ -4,7 +4,7 @@
 import random
 
 play = 'Y'
-while play='Y':
+while play=='Y':
     print("Hey, I was thinking of a number between 1 to 20.Can you guess it???") 
     secret_number = random.randint(1, 20) #Generating a random number for player to guess.
 
