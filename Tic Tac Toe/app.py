@@ -1,7 +1,3 @@
-#########❤❤❤❤❤❤❤❤❤❤❤❤❤#####################
-#########Made with ❤ by Sumit Suman#####################
-#########     Github: @sumit6258           ######################
-
 from tkinter import *
 import tkinter.messagebox
 tk = Tk()
