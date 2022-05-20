@@ -44,7 +44,7 @@ while True:
     print(" My first python program!")
     print(" Simple Calculator in python by Patel Jay")
     print(" Enter 'a' for addition")
-    print(" Enter 's' for substraction")
+    print(" Enter 's' for subtraction")
     print(" Enter 'm' for multiplication")
     print(" Enter 'v' for average")
     print(" Enter 'q' for quit")
@@ -63,6 +63,6 @@ while True:
             list = average()
             print("Ans = ", list[0], " total inputs ",list[1])
         else:
-            print ("Sorry, invilid character")
+            print ("Sorry, Invalid Character")
     else:
         break
