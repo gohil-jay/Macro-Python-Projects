@@ -52,8 +52,11 @@ def hangman():
     limit = 5
     guess = input("This is the Hangman Word (HINT: word is a name of a fruit): " + display + " Enter your guess: \n")
     guess = guess.strip()
+    if len(guess.strip()) == 0:
+        print("Invalid Input, Try a letter\n")
+        hangman()
     guess = guess[0]
-    if len(guess.strip()) == 0 or len(guess.strip()) == 2 or guess.isnumeric():
+    if guess.isnumeric():
         print("Invalid Input, Try a letter\n")
         hangman()
  
