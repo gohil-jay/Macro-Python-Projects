@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="../static/styles.css" />
+	</head>
+
+	<body>
+		<div class="container">
+			<img src="../static/dominoz.png" alt="domino's logo" class="logo" />
+			{% if message %}
+			<p class="message">{{ message | safe}}</p>
+			{% endif %}
+			<form action="/submit" method="POST">
+				<div class="form-group">
+					<h3>Name</h3>
+					<input type="text" name="name" />
+				</div>
+
+				<div class="form-group">
+					<h3>Branch</h3>
+					<select name="branch">
+						<option value="">Select Branch</option>
+						<option value="aund">Aund</option>
+						<option value="baner">Baner</option>
+						<option value="katraj">Katraj</option>
+						<option value="warje">Warje</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<h3>Rate your branch</h3>
+					<input type="radio" name="rating" value="1" /> 1
+					<input type="radio" name="rating" value="2" /> 2
+					<input type="radio" name="rating" value="3" /> 3
+					<input type="radio" name="rating" value="4" /> 4
+					<input type="radio" name="rating" value="5" /> 5
+					<input type="radio" name="rating" value="6" /> 6
+					<input type="radio" name="rating" value="7" /> 7
+					<input type="radio" name="rating" value="8" /> 8
+					<input type="radio" name="rating" value="9" /> 9
+					<input type="radio" name="rating" value="10" checked /> 10
+				</div>
+
+				<div class="form-group">
+					<h3>Comments about your experience</h3>
+					<textarea
+						name="comments"
+						id=""
+						cols="30"
+						rows="10"
+						placeholder="Tell us what you liked and/or did not like"
+					></textarea>
+				</div>
+
+				<input type="submit" value="Submit" class="btn" />
+			</form>
+		</div>
+	</body>
+</html>
