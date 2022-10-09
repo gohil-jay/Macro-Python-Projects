@@ -59,7 +59,7 @@ def submit():
       send_mail(name, branch, rating, comments)
       return render_template('success.html')
 
-    return render_template('index.html', message='You have already submitted feedback')
+    return render_template('submitted.html')
 
 
 if __name__ == '__main__':
